@@ -1,0 +1,24 @@
+<div class="left-dashboard">
+    <div class="row m-0 align-items-center">
+        <div class="col-md-6 col-lg-4 col-sm-6 col-3">
+            <a href="javascript://">
+                <img src="/assets/images/fav.png" class="image-fluid mx-auto d-block" style="border-radius: 100px;">
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-8 col-sm-6 col-8">
+            <h2 class="dominos">Test</h2>
+            <!-- <p class="sec-8">Sector 8</p> -->
+        </div>
+    </div>
+    <hr />
+
+    <!-- <p class="sec-heading">Monitoring</p> -->
+    <ul class="left-side-bar mb-3">
+        <li [routerLink]="['/user-management']" routerLinkActive="active" *ngIf="role != 'USER'">
+            <a href="javascript://"> 
+            <img src="/assets/images/ic_bstats.png" class="pr-3 show">
+            <img src="/assets/images/ic_bstats2.png" class="pr-3 hide"> User Management</a>
+        </li>
+    </ul>
+
+</div>

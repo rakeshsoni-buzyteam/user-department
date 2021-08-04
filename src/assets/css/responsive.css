@@ -1,0 +1,74 @@
+/*
+Project Name: friendle me
+CSS Author: manpreet singh
+Author Designation: Web Designer
+Framework Used: Bootstrap
+Organization: Code Brew Labs
+*/
+@media (max-width:1199px) {
+.start-dashboard ul li { padding: 0px 10px;}
+}
+
+
+
+
+
+
+@media (max-width:992px) {
+.start-dashboard ul li { padding: 0px 8px !important;}
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+  header nav a {
+    padding:8px 0px!important;
+  }
+  header .navbar-brand img {
+    height: 52px;
+  }
+.start-dashboard ul li { padding: 0px 10px;}
+.top-bar ul{float:none;margin:0 auto;justify-content: center;}
+.rating-search{justify-content:center;float: none;}
+}
+
+
+
+@media (max-width:540px) {
+	.domino-sec, .map-mark{text-align:center !important;justify-content: center;}
+	.domino-sec .text-left{text-align:center !important;}
+	.subs-details .border-right{border-right:0px !important;}
+	.loyal-point{padding-left:0px !important;}
+	.btn-lang{float:none !important;width:100% !important;}
+	.edit-dropdown .dropdown-toggle::after{position:static !important;}
+	.edit-dropdown{width:auto !important;}
+}
+
+
+
+
+
+@media (max-width:480px) {
+	.start-dashboard ul li { padding: 0px 10px;}
+	.top-ba img{width:70%;}
+	.in-progress{width:100% !important;}
+	.thanx{display:none !important;}
+	
+}
+
+
+
+
+
+
+
+
+
+

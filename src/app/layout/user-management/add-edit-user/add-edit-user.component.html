@@ -1,0 +1,73 @@
+<form [formGroup]="form" (ngSubmit)="addEdit()">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{!id ? 'Add' : 'Edit'}} User</h4>
+    </div>
+    <div class="modal-body">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="required">Name</label>
+                    <input autocomplete="off" type="text" class="form-control" formControlName="name" name="name">
+                    <div class="text-error" *ngIf="form.controls['name'].errors?.required && show">
+                        Please enter name.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="required">Email</label>
+                    <input autocomplete="off" type="text" class="form-control" formControlName="email" name="email">
+                    <div class="text-error" *ngIf="form.controls['email'].errors?.required && show">
+                        Please enter email.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="required">Department</label>
+                    <select class="form-control" formControlName="department_id" name="department_id">
+                        <option value="" disabled> Select Department </option>
+                        <option [value]="data?._id" *ngFor="let data of allDepartment">{{data?.name}}</option>
+                    </select>
+                    <div class="text-error" *ngIf="form.controls['department_id'].errors?.required && show">
+                        Please enter department.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="required">Designation</label>
+                    <select class="form-control" formControlName="designiation" name="department_id">
+                        <option value="" disabled> Select Designation </option>
+                        <option value="MANAGER"> MANAGER </option>
+                        <option value="USER"> USER </option>
+                    </select>
+                    <div class="text-error" *ngIf="form.controls['designiation'].errors?.required && show">
+                        Please enter designiation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label [class.required]="!id">Password</label>
+                    <input autocomplete="off" type="password" class="form-control" formControlName="password" name="password">
+                    <div class="text-error" *ngIf="form.controls['password'].errors?.required && show">
+                        Please enter password.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button (click)="_bsModalRef.hide()" type="button" class="form-cancel btn btn-default mr-3">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
