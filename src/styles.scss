@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.text-error {
+    color: #dc2626;
+    margin-top: 5px;
+}
+.required:after {
+    content: '*';
+    color: #dc2626;
+    padding-left: 5px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.swal2-popup {
+    border-radius: 0 !important;
+}

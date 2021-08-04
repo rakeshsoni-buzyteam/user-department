@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="addEdit()">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{!id ? 'Add' : 'Edit'}} Department</h4>
+    </div>
+    <div class="modal-body">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="required">Name</label>
+                    <input autocomplete="off" type="text" class="form-control" formControlName="name" name="name">
+                    <div class="text-error" *ngIf="form.controls['name'].errors?.required && show">
+                        Please enter name.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button (click)="_bsModalRef.hide()" type="button" class="form-cancel btn btn-default mr-3">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
